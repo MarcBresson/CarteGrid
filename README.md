@@ -4,12 +4,15 @@
 
 # CarteGrid
 
-Turn one parametric FreeCAD model into a whole family of exported files, in one click.
+**CarteGrid** is a FreeCAD addon for batch-exporting parametrized variants of a model. Define a
+parameter grid over an `App::VarSet`'s properties, and it expands into named **variations**: for
+each one, CarteGrid applies the values, recomputes the document, and exports your chosen objects
+to whatever format FreeCAD itself can produce (STEP, STL, IGES, OBJ, 3MF, and more) — nothing
+hardcoded to a single format.
 
-Need a bracket in 5 lengths and 2 materials, exported to both STEP and STL? CarteGrid
-defines that sweep once, on top of a plain `App::VarSet`, then handles applying every
-combination, recomputing the document, and exporting the 20 resulting files, correctly named
-and without touching the model by hand.
+Need a bracket in 4 lengths, 2 heights, and 2 widths, exported to both STEP and STL? CarteGrid defines
+that sweep once and exports all 32 resulting files, correctly named, without touching the model
+by hand.
 
 [![Docs](https://github.com/MarcBresson/cartegrid/actions/workflows/docs.yml/badge.svg)](https://github.com/MarcBresson/cartegrid/actions/workflows/docs.yml)
 [![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)

@@ -2,9 +2,9 @@
 <package format="1" xmlns="https://wiki.freecad.org/Package_Metadata">
   <name>CarteGrid - Batch export from varset</name>
   <description>Generate and batch-export multiple variations of a parametric model, to whatever
-    format FreeCAD itself can produce. Define a parameter grid over an App::VarSet
-    (ParameterGrid-style, similar to scikit-learn), preview the resulting variations and their
-    names, then export a chosen set of objects per variation.</description>
+    format FreeCAD can produce. Define a parameter grid over an App::VarSet, preview
+    the resulting variations and their names, then export a chosen set of objects per
+    variation.</description>
   <version>1.3.1</version>
   <date>2026-07-08</date>
   <maintainer email="m.bresson@mailo.eu">Marc Bresson</maintainer>
@@ -22,8 +22,8 @@
   <pythonmin>3.11</pythonmin>
   <tag>parametric</tag>
   <tag>varset</tag>
-  <tag>export</tag>
   <tag>batch</tag>
-  <tag>3mf</tag>
-  <tag>mesh</tag>
+  <tag>export</tag>
+  <tag>variations</tag>
+  <tag>grid</tag>
 </package>
