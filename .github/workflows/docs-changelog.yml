@@ -1,0 +1,27 @@
+name: Docs changelog refresh
+
+# The changelog page is generated from GitHub releases at build time, so
+# editing a release's notes leaves the published docs stale until the next
+# build. Trigger one on Read the Docs whenever a release is published or edited.
+on:
+  release:
+    types: [published, edited, deleted]
+
+permissions: {}
+
+concurrency:
+  group: docs-changelog
+  cancel-in-progress: true
+
+jobs:
+  rebuild:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Trigger Read the Docs build
+        env:
+          RTD_TOKEN: ${{ secrets.RTD_TOKEN }}
+        run: |
+          curl --fail-with-body --silent --show-error \
+            -X POST \
+            -H "Authorization: Token $RTD_TOKEN" \
+            "https://readthedocs.org/api/v3/projects/cartegrid/versions/latest/builds/"
